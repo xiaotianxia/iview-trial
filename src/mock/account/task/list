@@ -1,0 +1,35 @@
+{
+   "status":0,
+   "message":"success",
+   "data":
+     {
+      "totalCount":10,
+      "totalPageCount":10,
+      "pageNo":1,
+      "pageSize":10,
+      "list":
+        [{
+          "id":1,
+          "accountId": 123,
+          "accountName": "name",
+          "name": "taskName",
+          "sourceName" : "系统生成",
+          "importance": 5,
+          "description": "xxx",
+          "duration": "xxx",
+          "generateRulesDescription": "xxx",
+          "completeRulesDescription": "xxx",
+          "assignTime" : "2017-05-12 10:00:00",
+          "lastTraceTime": "2017-05-12 10:00:00",
+          "expiredTime": "2017-05-12 10:00:00",
+          "completedTime":"2017-05-12 10:00:00",
+          "statusName":"已跟进",
+          "status":0,
+          "traceLogs":[{
+            "resultName": "有效跟进-已联系上客户",
+            "content": "xxx",
+            "createTime": "xxx"
+           }]
+        }] 
+   }
+}

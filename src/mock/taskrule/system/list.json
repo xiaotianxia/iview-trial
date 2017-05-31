@@ -1,0 +1,45 @@
+{
+    "status": 0,
+    "message": "success",
+    "data": {
+        "totalCount": 10,
+        "totalPageCount": 10,
+        "pageNo": 1,
+        "pageSize": 10,
+        "list": [
+            {
+                "id": "xxx",
+                "name": "被拒提醒",
+                "description": "账户被拒，及时跟进客户",
+                "duration": 7,
+                "importance": 5,
+                "generateRulesDescription": "账户状态等于审核拒绝时",
+                "completeRulesDescription": "账户状态等于正常生效或者账面为零"
+            }, {
+                "id": "xxx",
+                "name": "流失防御",
+                "description": "账户连续7天未进行消费，及时了解情况并解决问题",
+                "duration": 6,
+                "importance": 4,
+                "generateRulesDescription": "账户状态等于正常生效或者账面为零",
+                "completeRulesDescription": "连续为消费天数小于等于7天"
+            }, {
+                "id": "xxx",
+                "name": "续费提醒",
+                "description": "账户可消费天数不足7天，需联系客户续费",
+                "duration": 4,
+                "importance": 3,
+                "generateRulesDescription": "账户状态等于正常生效或账面为零或者审核拒绝或者预算不足并且可消费天数小于等于7天",
+                "completeRulesDescription": "账户状态等于正常生效或账面为零或者审核拒绝或者预算不足并且可消费天数大于等于8天"
+            }, {
+                "id": "xxx",
+                "name": "资质到期",
+                "description": "资质即将到期，尽快联系客户，更新资质",
+                "duration": 4,
+                "importance": 3,
+                "generateRulesDescription": "账户状态等于正常生效或账面为零或者审核拒绝或者预算不足并且主体资质到期日距今日小于等于30天",
+                "completeRulesDescription": "账户状态等于正常生效或账面为零"
+            }
+        ]
+    }
+}

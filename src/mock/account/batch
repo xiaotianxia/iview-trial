@@ -1,0 +1,9 @@
+{
+    "data": {
+        "accountId": 3, 
+        "name": "mock", 
+        "viewState": "mock", 
+        "cid": 11, 
+        "customerName": "mock"
+    }
+}

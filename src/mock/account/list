@@ -1,0 +1,42 @@
+{
+    "data": {
+        "results": [
+            {
+                "cid": 29, 
+                "companyName": "mock", 
+                "uid": 97, 
+                "name": "mock", 
+                "state": "mock", 
+                "siteUrl": "mock", 
+                "industry1": 86, 
+                "industry2": 81, 
+                "industry3": 51, 
+                "csName": "mock", 
+                "csId": 75, 
+                "provinceId": 25, 
+                "cityId": 40, 
+                "agentId": 27, 
+                "agentName": "mock", 
+                "lastMaintainTime": "mock", 
+                "firstEffectiveTime": "mock", 
+                "firstConsumeTime": "mock", 
+                "registerTime": "mock", 
+                "lastDisableTime": "mock", 
+                "balance": 76, 
+                "budgetPerDay": 55, 
+                "consume": 0, 
+                "click": 5, 
+                "show": 31, 
+                "ctr": "mock", 
+                "acp": "mock", 
+                "cpm": "mock", 
+                "consumePerDay": 75, 
+                "canConsumeDays": 81, 
+                "taskNum": 86, 
+                "sameRatio": "mock", 
+                "circleRatio": "mock"
+            }
+        ], 
+        "total": 25
+    }
+}

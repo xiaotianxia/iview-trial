@@ -1,0 +1,15 @@
+{
+    "data": [
+        {
+            "contactName": "mock", 
+            "sex": 21, 
+            "mobile": "mock", 
+            "telephone": "mock", 
+            "email": "mock", 
+            "title": "mock", 
+            "fax": "mock", 
+            "isDefault": true, 
+            "remark": "mock"
+        }
+    ]
+}

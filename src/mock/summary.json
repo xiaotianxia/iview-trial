@@ -1,0 +1,18 @@
+{
+    "pendingTaskCount": 31, 
+    "consumeData": {
+        "consume": 0, 
+        "compareWithDayOfLastWeek": "0.3%", 
+        "compareWithYesterday": "-0.1%"
+    }, 
+    "consumeAccounts": {
+        "num": 65, 
+        "compareWithDayOfLastWeek": "10.3%", 
+        "compareWithYesterday": "5%"
+    }, 
+    "nonConsumeAccounts": {
+        "num": 4, 
+        "compareWithDayOfLastWeek": "5%", 
+        "compareWithYesterday": "4.3%"
+    }
+}
