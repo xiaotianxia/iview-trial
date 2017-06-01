@@ -1,7 +1,7 @@
 <template>
     <div id="app">
         <div class="menu-wrapper">
-            <menu-test></menu-test>
+            <my-menu></my-menu>
         </div>
         <div class="main">
             <router-view></router-view>
@@ -10,11 +10,12 @@
 </template>
 
 <script>
-import MenuTest from '@components/Menu'
+import MyMenu from '@components/component/menu/Menu'
+
 export default {
     name: 'app',
     components: {
-        MenuTest
+        MyMenu
     }
 }
 </script>

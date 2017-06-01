@@ -56,7 +56,7 @@
             </div>
         </div>
         <div class="monitor-table">
-        <table class="table">
+            <table class="table">
                 <thead>
                     <tr>
                         <th>账户名称</th>
@@ -100,6 +100,17 @@
                     </tr>
                 </tbody>
             </table>
+
+            <Page :total="total" 
+                placement="top"
+                show-total 
+                show-elevator 
+                show-sizer
+                :page-size-opts="pageSizeOpts"
+                @on-change="onPageChange"
+                @on-page-size-change="onPageSizeChange"
+            >
+            </Page>
         </div>
 
         <task-detail-modal ref="taskDetailModal" :detail-data="detailData"></task-detail-modal>
@@ -121,7 +132,9 @@ export default {
             startDate: Enum.START_DATE,
             endDate: Enum.END_DATE,
             datePickerOptions: Enum.datePickerOptions,
-            detailData: {}
+            detailData: {},
+            total: 0,
+            pageSizeOpts: [10, 50, 100]
         }
     },
 
@@ -141,7 +154,9 @@ export default {
                 status: -1,
                 name: '',
                 accountName: '',
-                source: -1
+                source: -1,
+                pageNo: 1,
+                pageSize: 20
             }
         },
 
@@ -168,7 +183,7 @@ export default {
                 let data = res.data;
                 if(data.success) {
                     this.list = data.data.list;
-                    // this.total = data.data.totalCount;
+                    this.total = data.data.totalCount;
                 }
             });
         },
@@ -176,6 +191,17 @@ export default {
         onCheckDetail (data) {
             this.detailData = data;
             this.$refs.taskDetailModal.showModal();
+        },
+
+        onPageChange (pageNo) {
+            this.pageNo = pageNo;
+            this.onQuery();
+        },
+
+        onPageSizeChange (pageSize) {
+            this.pageNo = 1;
+            this.pageSize = pageSize;
+            this.onQuery();
         }
     },
 

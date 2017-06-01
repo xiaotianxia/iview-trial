@@ -88,8 +88,14 @@ export default {
 
 </script>
 
-<style scoped lang="less">
+<style lang="less">
 	.ivu-modal {
+		.ivu-modal-body {
+			padding-top: 0;
+		}
+		.ivu-rate {
+			font-size: 14px;
+		}
 		.content {
 			padding-top: 5px;
 			padding-bottom: 5px;
@@ -111,8 +117,12 @@ export default {
 				margin-right: 10px;
 			}
 			.content-header {
+				display: flex;
+				height: 50px;
 				span {
-					width: 22%;
+					width: 25%;
+					height: 100%;
+					line-height: 50px;
 				}
 				.header-item i {
     				font-size: 50px;

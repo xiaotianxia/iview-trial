@@ -1,7 +1,38 @@
 <template>
     <div class="rule">
     	<div class="rule-table">
-            <Table border stripe :columns="title" :data="list"></Table>   
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>任务名称</th>
+                        <th>任务描述</th>
+                        <th>重要性</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="item in list">
+                        <td>{{item.name}}</td>
+                        <td>
+                            <span>{{item.description}}</span>
+                            <i class="ivu-icon ivu-icon-help-circled">
+                                <div class="rule-detail">
+                                    <h5>任务生成条件</h5>
+                                    <p>{{item.generateRuleDescription}}</p>
+                                    <h5>任务完成条件</h5>
+                                    <p>{{item.completeRuleDescription}}</p>
+                                    <h5>任务有效期</h5>
+                                    <p>{{item.duration}}个自然日</p>
+                                    <h5>任务生成日</h5>
+                                    <p>每天早上8点</p>
+                                </div>
+                            </i>
+                        </td>
+                        <td>
+                            <Rate :value="item.importance"></Rate>
+                        </td>
+                    </tr>
+                </tbody>
+            </table> 
         </div>
     </div>
 </template>
@@ -12,32 +43,6 @@ import net from '@net'
 export default {
     data () {
         return {
-            title: [
-                {
-                    title: '任务名称',
-                    key: 'name',
-                    width: 100
-                },
-                {
-                    title: '任务描述',
-                    key: 'description'
-                },
-                {
-                    title: '重要性',
-                    key: 'importance',
-                    width: 200,
-                    render: (h, params) => {
-                        return h('Rate', {
-                            attrs: {
-                                disabled: true
-                            },
-                            props: {
-                                value: params.row.importance
-                            }
-                        });
-                    }
-                }
-            ],
             list: []
         }
     },
@@ -45,9 +50,7 @@ export default {
     methods: {
         getRuleData () {
             net.task.getHeadquarterSystemList().then((res) => {
-                this.list = res.data.data.list
-            }, () => {
-                console.log('error');
+                this.list = res.data.data
             });
         }
     },
@@ -62,5 +65,27 @@ export default {
 	.rule-table {
         width: 90%;
         margin: 10px auto;
+    }
+    .ivu-icon {
+        position: relative;
+        cursor: pointer;
+        .rule-detail {
+            position: absolute;
+            top: 15px;
+            left: 10px;
+            display: none;
+            opacity: 0;
+            background-color: #ffc;
+            padding: 10px;
+            max-width: 400px;
+            min-width: 250px;
+            cursor: default;
+            text-align: left;
+            z-index: 999;
+        }
+        &:hover .rule-detail {
+            display: block;
+            opacity: 1;
+        }
     }
 </style>
