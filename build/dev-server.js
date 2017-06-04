@@ -1,4 +1,5 @@
 require('./check-versions')()
+var mock = require('../mock-config/mock')
 
 var config = require('../config')
 if (!process.env.NODE_ENV) {
@@ -38,6 +39,10 @@ compiler.plugin('compilation', function (compilation) {
     cb()
   })
 })
+
+console.log('===========start building mocks=============');
+mock.init();
+console.log('===========finish building mocks=============');
 
 // proxy api requests
 Object.keys(proxyTable).forEach(function (context) {

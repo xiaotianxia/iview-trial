@@ -1,0 +1,35 @@
+{
+    "title": "Syntax Demo",
+    "string1": "★★★★★★★",
+    "string2": "valuevaluevalue",
+    "number1": 100,
+    "number2": 36,
+    "number3": 2.1112,
+    "number4": 123.61,
+    "number5": 123.694,
+    "number6": 123.1236336223,
+    "boolean1": false,
+    "boolean2": false,
+    "object1": {
+        "110000": "北京市",
+        "120000": "天津市",
+        "140000": "山西省"
+    },
+    "object2": {
+        "330000": "浙江省",
+        "340000": "安徽省"
+    },
+    "array1": "CMD",
+    "array2": [
+        "Mock.js",
+        "Mock.js",
+        "Mock.js",
+        "Mock.js",
+        "Mock.js"
+    ],
+    "array3": [
+        "Mock.js",
+        "Mock.js",
+        "Mock.js"
+    ]
+}
