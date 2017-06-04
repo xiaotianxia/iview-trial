@@ -30,7 +30,7 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
         '/sme-cs/web': {
-            target: 'http://localhost:8080/mock/',
+            target: 'http://localhost:3000/mock/',
             pathRewrite(path, options) {
                 options.method = 'GET';
                 return url.parse(path).pathname.replace(/^\/sme-cs\/web\//, '/') + '.json';
