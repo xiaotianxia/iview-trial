@@ -6,25 +6,37 @@ let ENUM =  {
             {
                 text: '今天',
                 value () {
-                    return [moment().format('YYYYMMDD'), moment().format('YYYYMMDD')];
+                    return [moment(), moment()];
                 }
             },
             {
                 text: '昨天',
                 value () {
-                    return [moment().subtract(1,'days').format('YYYYMMDD'), moment().subtract(1,'days').format('YYYYMMDD')];
+                    return [moment().subtract(1, 'days'), moment().subtract(1, 'days')];
                 }
             },
             {
-                text: '一周前',
+                text: '最近7天',
                 value () {
-                    return [moment().subtract(7, 'days').format('YYYYMMDD'), moment().subtract(1,'days').format('YYYYMMDD')];
+                    return [moment().subtract(7, 'days'), moment().subtract(1, 'days')];
                 }
             },
             {
                 text: '最近一个月',
                 value () {
-                    return [moment().subtract(30, 'days').format('YYYYMMDD'), moment().subtract(1,'days').format('YYYYMMDD')];
+                    return [moment().subtract(30, 'days'), moment().subtract(1, 'days')];
+                }
+            },
+            {
+                text: '本月',
+                value () {
+                    return [moment().startOf('month'), moment()];
+                }
+            },
+            {
+                text: '上个月',
+                value () {
+                    return [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')];
                 }
             }
         ]
@@ -67,57 +79,57 @@ let ENUM =  {
         ],
         importance: [
             {
-                value: '0',
+                value: 0,
                 text: '全部'
             }, {
-                value: '1',
+                value: 1,
                 text: '一星'
             }, {
-                value: '2',
+                value: 2,
                 text: '二星'
             }, {
-                value: '3',
+                value: 3,
                 text: '三星'
             }, {
-                value: '4',
+                value: 4,
                 text: '四星'
             }, {
-                value: '5',
+                value: 5,
                 text: '五星'
             }
         ],
         jobLogResult: [
             {
-                value: '1',
+                value: 1,
                 text: '有效跟进-已联系上客户'
             }, {
-                value: '2',
+                value: 2,
                 text: '有效跟进-客户接受方案'
             }, {
-                value: '3',
+                value: 3,
                 text: '有效跟进-其他'
             }, {
-                value: '4',
+                value: 4,
                 text: '无效跟进-未联系上客户'
             }, {
-                value: '5',
+                value: 5,
                 text: '无效跟进-客户拒绝方案'
             }, {
-                value: '6',
+                value: 6,
                 text: '无效跟进-其他'
             },
         ],
         source: [
             {
-                value: '-1',
+                value: -1,
                 text: '全部来源'
             },
             {
-                value: '0',
+                value: 0,
                 text: '系统生成'
             },
             {
-                value: '1',
+                value: 1,
                 text: '总部下发'
             }
         ]

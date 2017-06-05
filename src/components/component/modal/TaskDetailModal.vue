@@ -1,8 +1,11 @@
 <template>
 	<Modal v-model="show"
-			title="任务记录详情"
-			@on-ok="ok"
-        	@on-cancel="cancel">
+		title="任务记录详情"
+		@on-ok="ok"
+        @on-cancel="cancel"
+        :mask-closable="maskClosable"
+        :loading="loading"
+    >
 	    <div class="content">
 			<div class="content-item">
 				<p class="content-header">
@@ -11,7 +14,7 @@
 					</span>
 					<span>{{detailData.name}}</span>
 					<span>
-						<Rate :value="detailData.importance"></Rate>
+						<Rate :value="detailData.importance" disabled></Rate>
 					</span>
 					<span>{{detailData.statusName}}</span>
 				</p>
@@ -60,12 +63,12 @@
 </template>
 
 <script>
-// import semantic from '@semantic';
-
 export default {
 	data() {
 		return {
-			show: false
+			show: false,
+			maskClosable: false,
+			loading: true
 		}
 	},
 
@@ -73,7 +76,11 @@ export default {
 
 	methods: {
 		ok () {
-
+			console.log(this.$Modal);
+			setTimeout(() => {
+				this.show = false; //手动关闭
+                this.$Message.info('异步关闭了对话框');
+            }, 2000);
 		},
 
 		cancel () {

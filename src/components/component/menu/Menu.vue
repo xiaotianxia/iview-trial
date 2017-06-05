@@ -76,7 +76,13 @@ export default {
 }
 </script>
 <style>
+    .ivu-menu {
+        width: 100%!important;
+    }
     .ivu-menu-item-selected {
         font-weight: bold;
+    }
+    .ivu-menu-vertical.ivu-menu-light:after {
+        width: 0;
     }
 </style>

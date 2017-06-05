@@ -25,13 +25,13 @@ export default {
         position: fixed;
         top: 0;
         left: 0;
-        width: 240px;
+        width: 160px;
         height: 100%;
         overflow: auto;
         border-right: 1px solid #d7dde4;
     }
     .main {
         padding: 10px 0;
-        margin-left: 245px;
+        margin-left: 165px;
     }
 </style>
