@@ -17,9 +17,9 @@
                             <i class="ivu-icon ivu-icon-help-circled">
                                 <div class="rule-detail">
                                     <h5>任务生成条件</h5>
-                                    <p>{{item.generateRuleDescription}}</p>
+                                    <p>{{item.generateRulesDescription}}</p>
                                     <h5>任务完成条件</h5>
-                                    <p>{{item.completeRuleDescription}}</p>
+                                    <p>{{item.completeRulesDescription}}</p>
                                     <h5>任务有效期</h5>
                                     <p>{{item.duration}}个自然日</p>
                                     <h5>任务生成日</h5>
@@ -28,7 +28,7 @@
                             </i>
                         </td>
                         <td>
-                            <Rate :value="item.importance"></Rate>
+                            <Rate :value="item.importance" disabled></Rate>
                         </td>
                     </tr>
                 </tbody>
@@ -50,7 +50,7 @@ export default {
     methods: {
         getRuleData () {
             net.task.getHeadquarterSystemList().then((res) => {
-                this.list = res.data.data
+                this.list = res.data.data.list
             });
         }
     },

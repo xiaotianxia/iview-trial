@@ -42,7 +42,6 @@ compiler.plugin('compilation', function (compilation) {
 
 console.log('===========start building mocks=============');
 mock.init();
-console.log('===========finish building mocks=============');
 
 // proxy api requests
 Object.keys(proxyTable).forEach(function (context) {

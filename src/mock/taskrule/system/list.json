@@ -2,43 +2,46 @@
     "status": 0,
     "message": "success",
     "data": {
-        "totalCount": 10,
+        "totalCount": 4,
         "totalPageCount": 10,
         "pageNo": 1,
         "pageSize": 10,
         "list": [
             {
-                "id": "xxx",
-                "name": "被拒提醒",
-                "description": "账户被拒，及时跟进客户",
-                "duration": 7,
-                "importance": 5,
-                "generateRulesDescription": "账户状态等于审核拒绝时",
-                "completeRulesDescription": "账户状态等于正常生效或者账面为零"
-            }, {
-                "id": "xxx",
-                "name": "流失防御",
-                "description": "账户连续7天未进行消费，及时了解情况并解决问题",
+                "id": "350000198404013753",
+                "name": "罗艳",
+                "description": "多么值约将维花论头次信次论放级月系。向也县质学争则平王构低较团周。",
                 "duration": 6,
+                "importance": 1,
+                "generateRulesDescription": "争志科命外数除例会何入离将作其名身。美号力重究号记再高果部列日实此学业。适行全斗花权色话主战意达取非至。意号四联局明适其及空金太斗查持即如。导门实话以众党等去等况地长布持地参此。的省要结理前白族当七美成。两过四带金物接转感出复前方。",
+                "completeRulesDescription": "住证加由色求她件道该点二件维间响。局二去基问道育着权其切于装开西。容程么长多同广进响心查然金问队思见。部以活子太思放及身各多业温应运转。"
+            },
+            {
+                "id": "350000198404013753",
+                "name": "罗艳",
+                "description": "多么值约将维花论头次信次论放级月系。向也县质学争则平王构低较团周。",
+                "duration": 6,
+                "importance": 3,
+                "generateRulesDescription": "争志科命外数除例会何入离将作其名身。美号力重究号记再高果部列日实此学业。适行全斗花权色话主战意达取非至。意号四联局明适其及空金太斗查持即如。导门实话以众党等去等况地长布持地参此。的省要结理前白族当七美成。两过四带金物接转感出复前方。",
+                "completeRulesDescription": "住证加由色求她件道该点二件维间响。局二去基问道育着权其切于装开西。容程么长多同广进响心查然金问队思见。部以活子太思放及身各多业温应运转。"
+            },
+            {
+                "id": "350000198404013753",
+                "name": "罗艳",
+                "description": "多么值约将维花论头次信次论放级月系。向也县质学争则平王构低较团周。",
+                "duration": 2,
                 "importance": 4,
-                "generateRulesDescription": "账户状态等于正常生效或者账面为零",
-                "completeRulesDescription": "连续为消费天数小于等于7天"
-            }, {
-                "id": "xxx",
-                "name": "续费提醒",
-                "description": "账户可消费天数不足7天，需联系客户续费",
-                "duration": 4,
-                "importance": 3,
-                "generateRulesDescription": "账户状态等于正常生效或账面为零或者审核拒绝或者预算不足并且可消费天数小于等于7天",
-                "completeRulesDescription": "账户状态等于正常生效或账面为零或者审核拒绝或者预算不足并且可消费天数大于等于8天"
-            }, {
-                "id": "xxx",
-                "name": "资质到期",
-                "description": "资质即将到期，尽快联系客户，更新资质",
-                "duration": 4,
-                "importance": 3,
-                "generateRulesDescription": "账户状态等于正常生效或账面为零或者审核拒绝或者预算不足并且主体资质到期日距今日小于等于30天",
-                "completeRulesDescription": "账户状态等于正常生效或账面为零"
+                "generateRulesDescription": "争志科命外数除例会何入离将作其名身。美号力重究号记再高果部列日实此学业。适行全斗花权色话主战意达取非至。意号四联局明适其及空金太斗查持即如。导门实话以众党等去等况地长布持地参此。的省要结理前白族当七美成。两过四带金物接转感出复前方。",
+                "completeRulesDescription": "住证加由色求她件道该点二件维间响。局二去基问道育着权其切于装开西。容程么长多同广进响心查然金问队思见。部以活子太思放及身各多业温应运转。"
+            },
+            {
+                "id": "350000198404013753",
+                "name": "罗艳",
+                "description": "多么值约将维花论头次信次论放级月系。向也县质学争则平王构低较团周。",
+                "duration": 6,
+                "importance": 2,
+                "generateRulesDescription": "争志科命外数除例会何入离将作其名身。美号力重究号记再高果部列日实此学业。适行全斗花权色话主战意达取非至。意号四联局明适其及空金太斗查持即如。导门实话以众党等去等况地长布持地参此。的省要结理前白族当七美成。两过四带金物接转感出复前方。",
+                "completeRulesDescription": "住证加由色求她件道该点二件维间响。局二去基问道育着权其切于装开西。容程么长多同广进响心查然金问队思见。部以活子太思放及身各多业温应运转。"
             }
         ]
     }
