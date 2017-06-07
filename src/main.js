@@ -5,8 +5,8 @@ import router from './router'
 import net from './net' //网络请求相关
 
 import iView from 'iview'
-import './style/main.less'
-import 'iview/dist/styles/iview.css'
+import '@/style/main.less'
+import '@/style/my-theme/index.less'
 
 Vue.use(iView)
 
