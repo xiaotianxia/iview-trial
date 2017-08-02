@@ -93,7 +93,10 @@ var webpackConfig = merge(baseWebpackConfig, {
     ]),
     new webpack.ProvidePlugin({
       axios: 'axios',
-      moment: 'moment'
+      moment: 'moment',
+      '_': 'lodash',
+      jquery: 'jquery',
+      $: 'jquery'
     })
   ]
 })

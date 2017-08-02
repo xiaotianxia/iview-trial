@@ -12,8 +12,10 @@
   "dependencies": {
     "axios": "^0.16.1",
     "iview": "^2.0.0",
+    "jquery": "^3.2.1",
     "less": "^2.7.2",
     "less-loader": "^4.0.3",
+    "lodash": "^4.17.4",
     "mockjs": "^1.0.1-beta3",
     "moment": "^2.18.1",
     "style-loader": "^0.18.1",

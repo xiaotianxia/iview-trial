@@ -1,4 +1,5 @@
-import task from './task'
+import task from './task';
+import accountInfo from './accountInfo';
 
 axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 axios.defaults.headers.common['Cache-Control'] = 'no-cache, no-store, must-revalidate';
@@ -29,5 +30,6 @@ axios.interceptors.response.use(response => {
 });
 
 export default {
-    task
+    task,
+    accountInfo
 }
