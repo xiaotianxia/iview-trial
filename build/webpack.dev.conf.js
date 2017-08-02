@@ -33,7 +33,7 @@ module.exports = merge(baseWebpackConfig, {
     new FriendlyErrorsPlugin(),
     new webpack.ProvidePlugin({
         axios: 'axios',
-        moment: 'moment',
+        moment: 'moment'
     })
   ]
 })
