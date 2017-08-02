@@ -27,7 +27,6 @@ export default {
 				return {
 					openNames: MENUS[key].openName,
 					activeName: MENUS[key].name
-
 				};
 			}
 		}

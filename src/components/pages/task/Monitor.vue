@@ -5,8 +5,8 @@
                 <div class="form-item">
                     <label>运营单位</label>
                     <Select v-model="agentId">
-                        <Option v-for="item in test" 
-                            :value="item.value" 
+                        <Option v-for="item in test"
+                            :value="item.value"
                             :key="item"
                         >
                             {{ item.text }}
@@ -15,20 +15,20 @@
                 </div>
                 <div class="form-item">
                     <label>下发日期</label>
-                    <Date-picker type="daterange" 
+                    <Date-picker type="daterange"
                         format="yyyyMMdd"
-                        v-model="date" 
+                        v-model="date"
                         confirm
-                        :options="datePickerOptions" 
-                        placement="bottom-end" 
+                        :options="datePickerOptions"
+                        placement="bottom-end"
                         placeholder="选择日期">
                     </Date-picker>
                 </div>
                 <div class="form-item">
                     <label>任务来源</label>
                     <Select v-model="source">
-                        <Option v-for="item in Enum.TASK_DATA_CONFIG.source" 
-                            :value="item.value" 
+                        <Option v-for="item in Enum.TASK_DATA_CONFIG.source"
+                            :value="item.value"
                             :key="item"
                         >
                             {{ item.text }}
@@ -48,8 +48,8 @@
                 <div class="form-item">
                     <label>重要性</label>
                     <Select v-model="importance">
-                        <Option v-for="item in Enum.TASK_DATA_CONFIG.importance" 
-                            :value="item.value" 
+                        <Option v-for="item in Enum.TASK_DATA_CONFIG.importance"
+                            :value="item.value"
                             :key="item"
                         >
                             {{ item.text }}
@@ -61,8 +61,8 @@
                 <div class="form-item">
                     <label>任务状态</label>
                     <Select v-model="status">
-                        <Option v-for="item in Enum.TASK_DATA_CONFIG.status" 
-                            :value="item.value" 
+                        <Option v-for="item in Enum.TASK_DATA_CONFIG.status"
+                            :value="item.value"
                             :key="item"
                         >
                             {{ item.text }}
@@ -70,9 +70,10 @@
                     </Select>
                 </div>
                 <div class="form-item">
-                    <Button type="primary" @click="onQuery">查询</Button>
-                    <Button @click="onReset">重置</Button>
-                    <Button type="success">报表导出</Button>
+                    <button class="ui button orange">查询</button>
+                    <Button class="ui button orange" type="primary" @click="onQuery">搜索</Button>
+                    <Button class="ui button blue" @click="onReset">重置</Button>
+                    <Button class="ui button" type="success" icon="ios-cloud-download">报表导出</Button>
                 </div>
             </div>
         </div>
@@ -122,10 +123,10 @@
                 </tbody>
             </table>
 
-            <Page :total="total" 
+            <Page :total="total"
                 placement="top"
-                show-total 
-                show-elevator 
+                show-total
+                show-elevator
                 show-sizer
                 :page-size-opts="pageSizeOpts"
                 @on-change="onPageChange"
@@ -162,7 +163,7 @@ export default {
     },
 
     components: {
-        TaskDetailModal        
+        TaskDetailModal
     },
 
     methods: {
@@ -199,12 +200,12 @@ export default {
                 this[key] = this.initParamsObj[key];
             });
 
-            // this.$router.push({
-            //     path: this.$route.path,
-            //     query: {
-            //         _: + new Date()
-            //     }
-            // });
+            this.$router.push({
+                path: this.$route.path,
+                query: {
+                    _: + new Date()
+                }
+            });
         },
 
         onQuery () {

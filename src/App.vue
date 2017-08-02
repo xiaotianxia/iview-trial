@@ -1,37 +1,37 @@
 <template>
     <div id="app">
+        <my-header></my-header>
         <div class="menu-wrapper">
             <my-menu></my-menu>
         </div>
         <div class="main">
-            <router-view></router-view>
+            <router-view :key="$route.fullPath"></router-view>
         </div>
     </div>
 </template>
 
 <script>
 import MyMenu from '@components/component/menu/Menu'
+import MyHeader from '@components/component/Header'
 
 export default {
     name: 'app',
     components: {
-        MyMenu
+        MyMenu,
+        MyHeader
     }
 }
 </script>
 
 <style lang="less">
-    .menu-wrapper {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 160px;
-        height: 100%;
-        overflow: auto;
-        border-right: 1px solid #d7dde4;
+    #app {
+        padding-top: 50px;
     }
     .main {
-        padding: 10px 0;
+        padding: 10px;
         margin-left: 165px;
+    }
+    .ivu-loading-bar {
+        top: 50px;
     }
 </style>
