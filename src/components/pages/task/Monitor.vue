@@ -7,7 +7,7 @@
                     <Select v-model="agentId">
                         <Option v-for="item in test"
                             :value="item.value"
-                            :key="item"
+                            :key="item.value"
                         >
                             {{ item.text }}
                         </Option>
@@ -29,7 +29,7 @@
                     <Select v-model="source">
                         <Option v-for="item in Enum.TASK_DATA_CONFIG.source"
                             :value="item.value"
-                            :key="item"
+                            :key="item.value"
                         >
                             {{ item.text }}
                         </Option>
@@ -50,7 +50,7 @@
                     <Select v-model="importance">
                         <Option v-for="item in Enum.TASK_DATA_CONFIG.importance"
                             :value="item.value"
-                            :key="item"
+                            :key="item.value"
                         >
                             {{ item.text }}
                         </Option>
@@ -63,7 +63,7 @@
                     <Select v-model="status">
                         <Option v-for="item in Enum.TASK_DATA_CONFIG.status"
                             :value="item.value"
-                            :key="item"
+                            :key="item.value"
                         >
                             {{ item.text }}
                         </Option>

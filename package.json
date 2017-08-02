@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "axios": "^0.16.1",
-    "iview": "^2.0.0-rc.14",
+    "iview": "^2.0.0",
     "less": "^2.7.2",
     "less-loader": "^4.0.3",
     "mockjs": "^1.0.1-beta3",

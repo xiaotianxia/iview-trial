@@ -1,12 +1,12 @@
-import Vue from 'vue'
-import App from './App'
-import router from './router'
+import Vue from 'vue';
+import App from './App';
+import router from './router';
 
-import net from './net' //网络请求相关
+import net from './net';
 
-import iView from 'iview'
-import '@/style/main.less'
-import '@/style/my-theme/index.less'
+import iView from 'iview';
+import 'iview/dist/styles/iview.css';
+import '@/style/main.less';
 
 Vue.use(iView)
 

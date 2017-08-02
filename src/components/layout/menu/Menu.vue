@@ -68,12 +68,57 @@ export default {
     methods: {
         initMenu () {
             let names = menuConfig.initMenu(this.$route.path);
-            this.openNames = [names.openNames];
-            this.activeName = names.activeName;
+            if(names) {
+                this.openNames = [names.openNames];
+                this.activeName = names.activeName;
+            }
         }
     }
 }
 </script>
-<style>
-    
+<style lang="less" scoped>
+    .ivu-menu {
+        width: 100%!important;
+    }
+    .ivu-menu,
+    .ivu-menu-submenu,
+    .ivu-menu-item {
+        font-size: 14px;
+    }
+    .ivu-menu-item {
+        padding: 0 24px!important;
+        height: 38px;
+        line-height: 38px;
+        a {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            color: rgba(0, 0, 0, .87)!important;
+        }
+        &:hover {
+            background: none!important;
+        }
+    }
+    .ivu-menu-item-selected {
+        font-weight: bold;
+        background-color: #e0e0e0;
+        a {
+            color: #1b1c1d;
+        }
+        &:hover {
+            background-color: #e0e0e0!important;
+        }
+    }
+    .ivu-menu-item-active {
+        border: none!important;
+    }
+    .ivu-menu-submenu-title {
+        color: rgba(0, 0, 0, .87)!important;
+    }
+    .ivu-menu-vertical.ivu-menu-light {
+        background-color: transparent;
+    }
+    .ivu-menu-vertical.ivu-menu-light:after {
+        width: 0;
+    }
 </style>
