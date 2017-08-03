@@ -1,9 +1,7 @@
 import Vue from 'vue';
 import App from './App';
 import router from './router';
-
 import net from './net';
-
 import iView from 'iview';
 import 'iview/dist/styles/iview.css';
 import '@/style/main.less';

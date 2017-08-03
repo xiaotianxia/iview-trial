@@ -26,7 +26,7 @@
             </router-link>
 
             <div class="right menu">
-                <span>代振</span>
+                <span>甜虾</span>
                 <span><a href="#">退出</a></span>
             </div>
         </div>
