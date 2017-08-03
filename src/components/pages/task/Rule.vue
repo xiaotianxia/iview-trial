@@ -32,13 +32,13 @@
                         </td>
                     </tr>
                 </tbody>
-            </table> 
+            </table>
         </div>
     </div>
 </template>
 
 <script>
-import net from '@net'
+import dao from '@dao'
 
 export default {
     data () {
@@ -49,7 +49,7 @@ export default {
 
     methods: {
         getRuleData () {
-            net.task.getHeadquarterSystemList().then((res) => {
+            dao.task.getHeadquarterSystemList().then((res) => {
                 this.list = res.data.data.list
             });
         }

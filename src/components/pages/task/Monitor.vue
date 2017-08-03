@@ -141,7 +141,7 @@
 
 <script>
 import Enum from '@Enum'
-import net from '@net'
+import dao from '@dao'
 import TaskDetailModal from '@components/component/modal/TaskDetailModal'
 
 export default {
