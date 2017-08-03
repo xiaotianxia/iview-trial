@@ -244,7 +244,6 @@ export default {
 
     mounted () {
         this.onQuery();
-        console.log(this.accountInfo)
     }
 }
 </script>
