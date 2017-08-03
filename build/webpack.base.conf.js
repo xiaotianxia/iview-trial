@@ -25,7 +25,7 @@ module.exports = {
       '@': resolve('src'),
       '@components': '@/components',
       '@Enum': path.join(__dirname, '../src/components/Enum.js'),
-      '@net': path.join(__dirname, '../src/net'),
+      '@dao': path.join(__dirname, '../src/dao'),
     }
   },
   module: {

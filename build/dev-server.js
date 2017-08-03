@@ -1,5 +1,4 @@
 require('./check-versions')()
-var mock = require('../mock-config/mock')
 
 var config = require('../config')
 if (!process.env.NODE_ENV) {
@@ -40,9 +39,6 @@ compiler.plugin('compilation', function (compilation) {
   })
 })
 
-// console.log('===========start building mocks=============');
-// mock.init();
-
 // proxy api requests
 Object.keys(proxyTable).forEach(function (context) {
   var options = proxyTable[context]
@@ -65,7 +61,6 @@ app.use(hotMiddleware)
 // serve pure static assets
 var staticPath = path.posix.join(config.dev.assetsPublicPath, config.dev.assetsSubDirectory)
 app.use(staticPath, express.static('./static'))
-app.use('/mock', express.static('./src/mock'));
 
 var uri = 'http://localhost:' + port
 
@@ -73,6 +68,10 @@ var _resolve
 var readyPromise = new Promise(resolve => {
   _resolve = resolve
 })
+
+//mock数据
+app.use('/mock', express.static('./src/mock'));
+app.use('/assets', express.static('./src/assets'));
 
 console.log('> Starting dev server...')
 devMiddleware.waitUntilValid(() => {

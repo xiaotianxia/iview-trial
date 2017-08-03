@@ -209,7 +209,7 @@ export default {
         },
 
         onQuery () {
-            net.task.getMonitorList(this.parseParams()).then(res => {
+            dao.task.getMonitorList(this.parseParams()).then(res => {
                 let data = res.data;
                 if(data.success) {
                     this.list = data.data.list;
